@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>All entries</h2>
+
+<ul>
+    {% for post in budget %}
+        <p>{{ post.date }}</p>
+        <p>{{ post.amount_spent }}</p>
+        <p>{{ post.description }}</p>
+        <hr>
+    {% endfor %}
+</ul>
+{% endblock %}
