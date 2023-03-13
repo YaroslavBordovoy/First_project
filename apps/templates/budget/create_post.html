@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include 'budget/custom_navigation.html' %}
+
+<h2>{{ title }}</h2><hr>
+
+<form action="{% url 'family_budget:create_post' %}" method="post">
+    {% csrf_token %}
+
+    {% for field in form %}
+    <p><label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}: </label>{{ field }}</p>
+    {% endfor %}
+
+    <button type="submit" class="form-button">Add</button>
+
+</form>
+{% endblock %}

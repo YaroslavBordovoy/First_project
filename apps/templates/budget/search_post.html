@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include 'budget/custom_navigation.html' %}
+
+<h2>{{ title }}</h2><hr>
+
+    <form action="{% url 'family_budget:post_information' %}" method="get">
+        <label>
+            <input name="q" type="text" placeholder="ID">
+        </label>
+    </form>
+{% endblock %}
