@@ -7,9 +7,12 @@
 
 <ol>
     {% for post in family_budget %}
+        <p>{{ post.pk }}</p>
         <p>{{ post.date }}</p>
         <p>{{ post.amount_spent }}</p>
         <p>{{ post.description }}</p>
+        {% include 'budget/helpers/delete_button.html' %}
+        {% include 'budget/helpers/update_button.html' %}
         <hr>
     {% endfor %}
 </ol>

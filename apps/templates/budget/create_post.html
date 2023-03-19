@@ -12,7 +12,8 @@
     <p><label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}: </label>{{ field }}</p>
     {% endfor %}
 
-    <button type="submit" class="form-button">Add</button>
+    <button type="submit" class="form-button">Add</button><br>
+    <a href="{% url 'family_budget:budget' %}">Back</a>
 
 </form>
 {% endblock %}

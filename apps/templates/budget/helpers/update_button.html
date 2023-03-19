@@ -1,0 +1,4 @@
+<form action="{% url 'family_budget:update_post' post.pk %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Update post">
+</form>

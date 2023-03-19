@@ -1,9 +1,7 @@
 from django.db import models
-from django.urls import reverse
 
 
 class Budget(models.Model):
-
     date = models.DateField(verbose_name="Дата")
     amount_spent = models.IntegerField(verbose_name="Потраченная сумма")
     description = models.CharField(max_length=200, verbose_name="Описание")
@@ -18,5 +16,5 @@ class Budget(models.Model):
 
     __repr__ = __str__
 
-    def get_absolute_url(self):
-         return reverse(kwargs={'pk': self.pk})
+    # def get_absolute_url(self):
+    #     return reverse(kwargs={'pk': self.pk})

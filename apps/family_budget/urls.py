@@ -9,4 +9,6 @@ urlpatterns = [
     path("creating-a-report/", views.create_post, name="create_post"),
     path("post-search/", views.search_post, name="search_post"),
     path("post-information/", views.read_post, name="post_information"),
+    path("delete-post/<int:pk>/", views.delete_post, name="delete_post"),
+    path("post/update-post/<int:pk>/", views.update_post, name="update_post"),
 ]

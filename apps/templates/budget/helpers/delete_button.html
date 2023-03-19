@@ -1,0 +1,4 @@
+<form action="{% url 'family_budget:delete_post' post.pk %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Delete post">
+</form>

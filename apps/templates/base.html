@@ -28,6 +28,13 @@
   <body>
     <div class="container-fluid page-wrapper">
         <h4>{% include 'header.html' %}</h4>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    {{ message|safe }}
+                {% endfor %}
+            </ul>
+        {% endif %}
 
          <div class="main-content">
              {%  block content %}
